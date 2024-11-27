@@ -1,0 +1,656 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    }
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold; 
+}
+
+/* Navbar styling */
+.navbar-custom {
+    background-color: #D2B48C; /* Warna latar belakang navbar */
+    transition: background-color 0.3s ease; /* Efek transisi ketika background berubah */
+}
+
+.navbar-custom.sticky-top {
+    background-color: rgba(210, 180, 140, 0.9); /* Warna latar belakang saat sticky */
+}
+
+/* Dropdown item styling */
+.dropdown-menu {
+    background-color: #A0522D; /* SaddleBrown color for dropdown */
+    border-radius: 5px;
+}
+
+.dropdown-item {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #fff;
+}
+
+.dropdown-item:hover {
+    background-color: #8B4513; /* Darker brown hover */
+    color: #fff;
+}
+
+/* Active class styling */
+.nav-link.active {
+    color: #fff; /* White color for active link */
+    font-weight: bold;
+}
+
+/* Right align for logo and name */
+.navbar-right {
+    margin-right: auto;
+}
+
+/* Custom style for dropdown position at the right */
+.navbar-nav {
+    flex-direction: row; /* Ensure the nav items are in a row */
+}
+
+.dropdown-menu-end {
+    right: 0; /* Ensure dropdown opens to the right */
+    left: auto;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column; /* Stack nav items in column on small screens */
+        width: 100%; /* Full width for dropdown */
+    }
+
+    .dropdown-menu {
+        position: static; /* Dropdown to appear below the toggle button */
+        float: none; /* Reset float */
+        width: 100%; /* Full width for dropdown */
+    }
+}
+/* end navbar */
+
+/* landing.index carousel */
+.section-slide {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Memastikan lebar penuh */
+    height: 500px; /* Sesuaikan tinggi carousel sesuai kebutuhan */
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mengisi area dengan memotong gambar jika perlu */
+}
+
+.text-overlay {
+    position: absolute;
+    top: 40%;
+    left: 24%;
+    max-width: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: left;
+}
+
+.text-overlay a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.title {
+    font-size: 3rem; /* Ukuran font untuk judul */
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.description {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1rem; /* Ukuran font untuk deskripsi */
+    margin-bottom: 50px; /* Jarak antara deskripsi dan tombol */
+    animation: fadeInUp 1s ease-in-out;
+}
+
+
+.btn {
+    background-color: #D2B48C; /* Warna tombol */
+    color: rgb(0, 0, 0); /* Warna teks tombol */
+    padding: 10px 20px; /* Padding tombol */
+    margin-bottom: 10px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1rem; /* Ukuran font untuk tombol */
+    border-radius: 5px; /* Sudut tombol melengkung */
+    text-decoration: none; /* Menghilangkan garis bawah pada teks tombol */
+}
+
+.btn:hover {
+    background-color: #A0522D; /* Warna tombol saat hover */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .text-overlay {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        max-width: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: left;
+    }
+    
+    .text-overlay a {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+    
+    .title {
+        font-size: 2,5rem; /* Ukuran font untuk judul */
+    }
+    
+    .description {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 1rem; /* Ukuran font untuk deskripsi */
+        margin-bottom: 50px; /* Jarak antara deskripsi dan tombol */
+    }
+}
+
+
+/* Animasi */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* end landing.index carousel */
+
+/* landing.index about */
+.logo-description {
+    display: flex;
+    flex-direction: row; /* Mengatur arah elemen menjadi kolom */
+    align-items: center; /* Memusatkan konten secara horizontal */
+    margin-top: 20px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-frame {
+    width: 150px; /* Menetapkan lebar frame logo */
+    height: 150px; /* Menetapkan tinggi frame logo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    max-width: 500%; /* Menjaga logo tidak lebih besar dari frame */
+    max-height: 400%; /* Menjaga logo tidak lebih tinggi dari frame */
+}
+
+.description-container {
+    text-align: center; /* Mengatur teks deskripsi agar rata tengah */
+    margin-top: 10px; /* Memberikan jarak antara logo dan deskripsi */
+    margin-left: 150px;
+    padding: 0 20px; /* Memberikan padding horizontal pada deskripsi */
+}
+
+.description-text {
+    font-size: 1rem; /* Ukuran font untuk deskripsi */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Media Queries untuk Responsif */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 100%; /* Menjaga logo tidak lebih besar dari frame */
+        max-height: 100%; /* Menjaga logo tidak lebih tinggi dari frame */
+    }
+    .logo-description {
+        display: flex;
+        flex-direction: column; /* Mengatur arah elemen menjadi kolom */
+        align-items: center; /* Memusatkan konten secara horizontal */
+        margin-top: 20px;
+    }
+    .description-container {
+        text-align: center; /* Mengatur teks deskripsi agar rata tengah */
+        margin-top: 10px; /* Memberikan jarak antara logo dan deskripsi */
+        margin-left: 0px;
+        padding: 0 20px; /* Memberikan padding horizontal pada deskripsi */
+    }
+    .logo-frame {
+        width: 250px; /* Menetapkan lebar frame logo untuk layar kecil */
+        height: 250px; /* Menetapkan tinggi frame logo untuk layar kecil */
+    }
+
+    .description-text {
+        font-size: 0.9rem; /* Ukuran font lebih kecil pada layar kecil */
+    }
+}
+
+/* end landing.index about */
+
+/* start landing.index card */
+.product-cards {
+    display: flex;
+    flex-wrap: wrap; /* Agar kartu bisa bergerak ke baris berikutnya jika tidak cukup ruang */
+    justify-content: space-between; /* Menyebar kartu secara merata */
+}
+
+.card {
+    background-color: white; /* Warna latar belakang kartu */
+    border-radius: 10px; /* Sudut membulat */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+    margin: 10px; /* Jarak antar kartu */
+    overflow: hidden; /* Menghapus bagian yang melebihi batas kartu */
+    width: calc(25% - 20px); /* Mengatur lebar kartu (4 kartu dalam satu baris) */
+    transition: transform 0.3s; /* Transisi efek hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Membesar sedikit saat hover */
+}
+
+.card-image {
+    width: 100%; /* Mengisi lebar kartu */
+    height: auto; /* Menjaga aspek rasio */
+}
+
+.card-content {
+    padding: 15px; /* Ruang di dalam kartu */
+}
+
+.card-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold; /* Judul dengan huruf tebal */
+    font-size: 1.25rem; /* Ukuran font judul */
+    margin: 0 0 10px; /* Jarak bawah judul */
+}
+
+.card-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem; /* Ukuran font deskripsi */
+    margin-bottom: 15px; /* Jarak bawah deskripsi */
+}
+
+@media (max-width: 1024px) {
+    .card {
+        width: calc(33.33% - 20px); /* 3 kartu dalam satu baris pada layar menengah */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* 2 kartu dalam satu baris pada layar kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* 1 kartu dalam satu baris pada layar sangat kecil */
+    }
+}
+/* end landing.index card */
+
+/* start landing.index ajakan */
+/* Container untuk gambar dan teks ajakan bergabung */
+.join-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #fff; /* Warna latar belakang untuk kontras */
+    border-radius: 10px; /* Sudut yang membulat untuk kontainer */
+}
+
+/* Gambar di sebelah kiri */
+.image-container {
+    flex: 1; /* Mengisi 50% ruang */
+    padding-right: 10px; /* Jarak antara gambar dan teks */
+}
+
+.image-container img {
+    max-width: 100%;
+    border-radius: 10px; /* Sudut gambar membulat */
+}
+
+.join-image {
+    max-width: 100%;
+    height: auto; /* Agar gambar tetap proporsional */
+    border-radius: 10px; /* Sudut gambar membulat */
+}
+
+/* Teks ajakan di sebelah kanan */
+.join-text-container {
+    flex: 1; /* Mengisi 50% ruang */
+    padding-left: 20px; /* Jarak antara gambar dan teks */
+}
+
+.join-title {
+    font-size: 1.8rem;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+}
+
+.join-description {
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Tombol Gabung Sekarang */
+.join-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: rgba(210, 180, 140, 0.9); /* Warna tombol oranye */
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.join-btn:hover {
+    background-color: #8B4513; /* Warna lebih gelap saat hover */
+}
+
+/* Media Queries untuk Responsif */
+@media (max-width: 768px) {
+    .join-section {
+        flex-direction: column; /* Ubah ke kolom di layar kecil */
+        text-align: center; /* Pusatkan teks */
+    }
+
+    .join-text-container {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+
+    .join-btn {
+        width: 100%; /* Tombol melebar di layar kecil */
+    }
+}
+
+/* end landing.index ajakan */
+
+/* start landing.budidaya */
+.content-section img{
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.content-section-detail img {
+    width: 400px; /* Lebar gambar */
+    max-height: fit-content; /* Ukuran maksimal gambar */
+    margin: 0 auto; /* Rata tengah (jika diperlukan) */
+    margin-bottom: 20px;
+    border-radius: 10px; /* Sudut melengkung */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Bayangan halus */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transisi halus saat hover */
+}
+
+/* Efek hover */
+.content-section-detail img:hover {
+    transform: scale(1.05); /* Membesarkan gambar sedikit saat dihover */
+    box-shadow: 0 6px 20px rgba(109, 49, 0, 0.61); /* Memperkuat bayangan saat dihover */
+}
+
+/* start landing.tipstrik */
+
+.tips-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.tip-item {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.tip-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tip-icon img {
+    width: 150px;
+    height: 150px;
+}
+
+h5 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+}
+
+p {
+    font-size: 1rem;
+    color: #666;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text-custom {
+    color: #ff6600;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.text-custom:hover {
+    color: #ff4500;
+}
+
+/* start landing.tips */
+
+.lead {
+    font-size: 1.1rem;
+    color: #555;
+    font-family: 'Poppins', sans-serif;
+}
+
+h4 {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+ul, ol {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.7;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ol li {
+    margin-bottom: 8px;
+}
+
+.tips img {
+    border-radius: 10px;
+    width: 80%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.about-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.about-image {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+.about-img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 1 1 55%;
+}
+
+.about-heading {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.about-description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.about-list {
+    list-style: disc;
+    margin-left: 1.5rem;
+    color: #555;
+}
+
+.core-values {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.values-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.values-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.value-item {
+    text-align: center;
+    flex: 1 1 20%;
+}
+
+.value-icon {
+    width: 80px;
+    margin-bottom: 1rem;
+}
+
+.value-heading {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+.value-description {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+}
+
